@@ -1,8 +1,7 @@
-'use strict'
 
+const PORT = process.env.PORT || 3000
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000
 const navData = require('./nav.json')
 const galleryData = require('./gallery.json')
 // console.log(galleryData);
@@ -27,3 +26,4 @@ app.get('*', function (req, res) {
 })
 
 app.listen(PORT, () => console.log(`server running on http://localhost:${PORT}`))
+
